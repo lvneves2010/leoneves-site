@@ -1,7 +1,5 @@
 // Inline SVG icons: no icon library, rendered on the server like the flags.
 
-import type { StatIcon } from './data/types'
-
 function Stroke({ children, className = 'icon' }: { children: React.ReactNode; className?: string }) {
   return (
     <svg
@@ -52,41 +50,4 @@ export function IconDownload() {
       <path d="M5 21h14" />
     </Stroke>
   )
-}
-
-const statPaths: Record<StatIcon, React.ReactNode> = {
-  // Clock
-  years: (
-    <>
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 6v6l4 2" />
-    </>
-  ),
-  // Globe
-  countries: (
-    <>
-      <circle cx="12" cy="12" r="10" />
-      <path d="M2 12h20" />
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-    </>
-  ),
-  // Folded map
-  continents: (
-    <>
-      <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z" />
-      <path d="M9 3v15" />
-      <path d="M15 6v15" />
-    </>
-  ),
-  // Shield with check
-  assets: (
-    <>
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      <path d="m9 12 2 2 4-4" />
-    </>
-  ),
-}
-
-export function StatIconSvg({ name }: { name: StatIcon }) {
-  return <Stroke className="stat-icon-svg">{statPaths[name]}</Stroke>
 }

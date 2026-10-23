@@ -154,16 +154,16 @@ export const profilePt: ProfileContent = {
   ],
 
   skills: [
-    { name: 'Engenharia & Arquitetura', items: ['Desenvolvimento Full Stack', 'Arquitetura de Software', 'Integração de Sistemas em Larga Escala', 'Integração de APIs', 'Automação de Processos ERP'] },
-    { name: 'Frontend', items: ['React', 'Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Bootstrap', 'Material UI'] },
-    { name: 'Backend', items: ['C#/.NET', 'ASP.NET', 'Java', 'Node.js', 'Python', 'PHP', 'Django', 'Ruby', 'Go'] },
-    { name: 'Mobile', items: ['Ionic', 'Cordova', 'Capacitor', 'Flutter', 'React Native'] },
-    { name: 'ERP & Plataformas Enterprise', items: ['Infor LN (LN Studio)', 'Baan', 'Infor CloudSuite', 'Salesforce (Admin, Apex, LWC)', 'ServiceNow'] },
-    { name: 'IA & Automação', items: ['Claude Code', 'Cursor', 'OpenAI APIs', 'IBM Watson Assistant', 'NLP', 'IA Conversacional', 'Prompt Engineering'] },
-    { name: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'Terraform', 'Ansible', 'AWS', 'GCP', 'IBM Cloud', 'CI/CD'] },
-    { name: 'Bancos de Dados', items: ['Oracle', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQL Server', 'DB2', 'Cloudant'] },
-    { name: 'Testes & Ferramentas', items: ['Git', 'Jest', 'Enzyme'] },
-    { name: 'Metodologias', items: ['Agile / Scrum', 'ITIL v3', 'PMBoK / PMP', 'Lean / Six Sigma'] },
+    { name: 'Engenharia & Arquitetura', items: ['Desenvolvimento Full Stack', 'Arquitetura de Software', 'Integração de Sistemas em Larga Escala', 'Integração de APIs', 'Automação de Processos ERP'], image: 'architecture' },
+    { name: 'Frontend', items: ['React', 'Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Bootstrap', 'Material UI'], image: 'frontend' },
+    { name: 'Backend', items: ['C#/.NET', 'ASP.NET', 'Java', 'Node.js', 'Python', 'PHP', 'Django', 'Ruby', 'Go'], image: 'backend' },
+    { name: 'Mobile', items: ['Ionic', 'Cordova', 'Capacitor', 'Flutter', 'React Native'], image: 'mobile' },
+    { name: 'ERP & Plataformas Enterprise', items: ['Infor LN (LN Studio)', 'Baan', 'Infor CloudSuite', 'Salesforce (Admin, Apex, LWC)', 'ServiceNow'], image: 'erp' },
+    { name: 'IA & Automação', items: ['Claude Code', 'Cursor', 'OpenAI APIs', 'IBM Watson Assistant', 'NLP', 'IA Conversacional', 'Prompt Engineering'], image: 'ai' },
+    { name: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'Terraform', 'Ansible', 'AWS', 'GCP', 'IBM Cloud', 'CI/CD'], image: 'devops' },
+    { name: 'Bancos de Dados', items: ['Oracle', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQL Server', 'DB2', 'Cloudant'], image: 'databases' },
+    { name: 'Testes & Ferramentas', items: ['Git', 'Jest', 'Enzyme'], image: 'testing' },
+    { name: 'Metodologias', items: ['Agile / Scrum', 'ITIL v3', 'PMBoK / PMP', 'Lean / Six Sigma'], image: 'methods' },
   ],
 
   languages: [
