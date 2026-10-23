@@ -56,6 +56,9 @@ Antes de publicar: `npm run build` e `npx eslint .` sem erros.
 ## Imagens
 
 - Fotos em WebP em `public/img/`, com `width`/`height` explícitos no `<img>`.
+- Versões menores para celular ficam ao lado da original como `<nome>-<largura>.webp` (ex.: `leonardo-neves-220.webp`) e entram pelo `srcSet()` de `App.tsx`, com `sizes` igual à largura exibida. Se trocar uma foto que tem variantes, gere as variantes de novo.
+- Fontes (Inter e JetBrains Mono) são hospedadas no próprio site via `@fontsource` (importadas em `src/main.tsx`), sem Google Fonts. `scripts/prerender.mjs` adiciona um `preload` do arquivo latino da Inter.
+- O brilho do hero (`.hero-bg`) tem altura e posição em pixels de propósito: em % ele "pulava" quando a fonte carregava (CLS).
 - `leonardo-neves.webp`: retrato com fundo transparente (o original do Weebly tinha fundo branco, removido para funcionar no tema escuro).
 - `og-image.jpg` (1200×630): prévia em LinkedIn/WhatsApp. Se mudar nome ou cargo, gere de novo.
 - Fotos de fundo dos cards: `public/img/stats/` (números do topo, 720×540) e `public/img/skills/` (stack tecnológico, 800×450). A chave de cada foto é `icon` em `stats` e `image` em `skills` (`profile.*.ts`); os caminhos ficam em `common.statImages` / `common.skillImages`. O estilo é `.photo-card` em `index.css`.

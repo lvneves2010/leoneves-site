@@ -155,13 +155,30 @@ function Hero() {
           </div>
         </div>
         <div className="hero-photo">
-          <img src={common.photo} alt={t.photoAlt} width={640} height={640} fetchPriority="high" />
+          <img
+            src={common.photo}
+            srcSet={srcSet(common.photo, [220, 440], 640)}
+            sizes="(max-width: 820px) 220px, 420px"
+            alt={t.photoAlt}
+            width={640}
+            height={640}
+            fetchPriority="high"
+          />
         </div>
       </div>
       <div className="container stats">
         {p.stats.map(s => (
           <div key={s.label} className="stat photo-card">
-            <img className="photo-card-img" src={common.statImages[s.icon]} alt="" width={720} height={540} decoding="async" />
+            <img
+              className="photo-card-img"
+              src={common.statImages[s.icon]}
+              srcSet={srcSet(common.statImages[s.icon], [360], 720)}
+              sizes="(max-width: 820px) calc(50vw - 24px), 260px"
+              alt=""
+              width={720}
+              height={540}
+              decoding="async"
+            />
             <strong>{s.value}</strong>
             <span>{s.label}</span>
           </div>
@@ -169,6 +186,11 @@ function Hero() {
       </div>
     </section>
   )
+}
+
+// srcset for an image with smaller variants saved next to it as <name>-<width>.webp
+function srcSet(src: string, widths: number[], fullWidth: number) {
+  return [...widths.map(w => `${src.replace(/\.webp$/, `-${w}.webp`)} ${w}w`), `${src} ${fullWidth}w`].join(', ')
 }
 
 // Deterministic pseudo-random sequence (mulberry32), so server and client render the same sparkles.
@@ -239,6 +261,8 @@ function About() {
           <img
             className="about-photo"
             src={common.photoEarth}
+            srcSet={srcSet(common.photoEarth, [540], 1080)}
+            sizes="(max-width: 820px) calc(100vw - 32px), 560px"
             alt={t.photoEarthAlt}
             width={1080}
             height={730}
