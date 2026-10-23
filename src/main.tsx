@@ -1,5 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
+// Self-hosted fonts (no render-blocking request to Google Fonts)
+import '@fontsource-variable/inter/wght.css'
+import '@fontsource/jetbrains-mono/latin-500.css'
 import './index.css'
 import App from './App.tsx'
 import { langFromPath } from './i18n'

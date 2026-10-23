@@ -45,7 +45,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -190,12 +190,14 @@ h4 {
   overflow: hidden;
 }
 
-/* Blue "ink smoke" glow, echoing the old site's look. */
+/* Blue "ink smoke" glow, echoing the old site's look.
+   Fixed pixel height/offset: a %-of-section size made it shift when the web font loaded (CLS). */
 .hero-bg {
   position: absolute;
-  inset: -20% -10% auto auto;
+  top: -170px;
+  right: -10%;
   width: 70%;
-  height: 120%;
+  height: 1000px;
   background:
     radial-gradient(closest-side at 62% 38%, rgb(37 99 235 / 0.35), transparent 70%),
     radial-gradient(closest-side at 40% 55%, rgb(56 189 248 / 0.28), transparent 75%),
@@ -861,8 +863,9 @@ h4 {
   }
 
   .hero-bg {
+    top: -200px;
     width: 120%;
-    height: 60%;
+    height: 600px;
   }
 
   .stats {
