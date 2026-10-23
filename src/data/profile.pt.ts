@@ -2,9 +2,9 @@ import type { ProfileContent } from './types'
 
 export const profilePt: ProfileContent = {
   seo: {
-    title: 'Leonardo Neves — Engenheiro de Software Sênior | Full Stack, .NET, Java, React, Infor LN',
+    title: 'Leonardo Neves | Engenheiro de Software Sênior, .NET e Java',
     description:
-      'Leonardo Neves é Engenheiro de Software Sênior em São Paulo com mais de 20 anos de experiência: full stack (C#/.NET, Java, React, Angular, Ionic), ERP Infor LN, DevOps e desenvolvimento assistido por IA. Baixe o currículo.',
+      'Engenheiro de Software Sênior com 20+ anos em tecnologia: full stack (C#/.NET, Java, React, Angular), ERP Infor LN, DevOps e desenvolvimento com IA.',
     keywords:
       'Leonardo Neves, Engenheiro de Software, Desenvolvedor Full Stack, C#, .NET, Java, React, Angular, Ionic, Infor LN, ERP, DevOps, desenvolvimento assistido por IA, Claude Code, São Paulo, Guarulhos, remoto',
   },
