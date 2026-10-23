@@ -31,7 +31,7 @@ export function head(lang: Lang) {
       url,
       image: common.siteUrl + common.photo,
       email: `mailto:${common.email}`,
-      sameAs: [common.linkedin, 'https://leoneves.weebly.com/'],
+      sameAs: [common.linkedin, common.github, 'https://leoneves.weebly.com/'],
       address: { '@type': 'PostalAddress', addressLocality: 'Guarulhos', addressRegion: 'SP', addressCountry: 'BR' },
       worksFor: { '@type': 'Organization', name: current.company },
       alumniOf: [
