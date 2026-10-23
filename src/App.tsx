@@ -140,6 +140,9 @@ function Hero() {
             <a className="btn" href={common.linkedin} target="_blank" rel="noopener me">
               LinkedIn
             </a>
+            <a className="btn" href={common.github} target="_blank" rel="noopener me">
+              GitHub
+            </a>
             <CvButtons />
           </div>
         </div>
@@ -356,6 +359,9 @@ function Contact() {
           </a>
           <a className="btn" href={common.linkedin} target="_blank" rel="noopener me">
             {common.linkedinLabel}
+          </a>
+          <a className="btn" href={common.github} target="_blank" rel="noopener me">
+            {common.githubLabel}
           </a>
           <CvButtons />
         </div>

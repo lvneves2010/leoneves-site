@@ -5,6 +5,8 @@ export const common = {
   email: 'lvneves2010@gmail.com',
   linkedin: 'https://www.linkedin.com/in/leonardo-neves-43376512',
   linkedinLabel: 'in/leonardo-neves',
+  github: 'https://github.com/lvneves2010',
+  githubLabel: 'github/lvneves2010',
   photo: '/img/leonardo-neves.webp',
   photoEarth: '/img/leonardo-neves-earth.webp',
   ogImage: '/img/og-image.jpg',
