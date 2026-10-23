@@ -2,9 +2,9 @@ import type { ProfileContent } from './types'
 
 export const profileEn: ProfileContent = {
   seo: {
-    title: 'Leonardo Neves — Senior Software Engineer | Full Stack, .NET, Java, React, Infor LN',
+    title: 'Leonardo Neves | Senior Software Engineer, .NET, Java & React',
     description:
-      'Leonardo Neves is a Senior Software Engineer in São Paulo, Brazil with 20+ years of experience: full stack (C#/.NET, Java, React, Angular, Ionic), Infor LN ERP, DevOps and AI-assisted development. Download the CV.',
+      'Senior Software Engineer with 20+ years in technology: full stack (C#/.NET, Java, React, Angular), Infor LN ERP, DevOps and AI-assisted development.',
     keywords:
       'Leonardo Neves, Senior Software Engineer, Full Stack Developer, C#, .NET, Java, React, Angular, Ionic, Infor LN, ERP, DevOps, AI-assisted development, Claude Code, São Paulo, Brazil, remote',
   },
