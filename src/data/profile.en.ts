@@ -154,16 +154,16 @@ export const profileEn: ProfileContent = {
   ],
 
   skills: [
-    { name: 'Engineering & Architecture', items: ['Full Stack Development', 'Software Architecture', 'Large-Scale System Integration', 'API Integration', 'ERP Process Automation'] },
-    { name: 'Frontend', items: ['React', 'Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Bootstrap', 'Material UI'] },
-    { name: 'Backend', items: ['C#/.NET', 'ASP.NET', 'Java', 'Node.js', 'Python', 'PHP', 'Django', 'Ruby', 'Go'] },
-    { name: 'Mobile', items: ['Ionic', 'Cordova', 'Capacitor', 'Flutter', 'React Native'] },
-    { name: 'ERP & Enterprise Platforms', items: ['Infor LN (LN Studio)', 'Baan', 'Infor CloudSuite', 'Salesforce (Admin, Apex, LWC)', 'ServiceNow'] },
-    { name: 'AI & Automation', items: ['Claude Code', 'Cursor', 'OpenAI APIs', 'IBM Watson Assistant', 'NLP', 'Conversational AI', 'Prompt Engineering'] },
-    { name: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'Terraform', 'Ansible', 'AWS', 'GCP', 'IBM Cloud', 'CI/CD'] },
-    { name: 'Databases', items: ['Oracle', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQL Server', 'DB2', 'Cloudant'] },
-    { name: 'Testing & Tools', items: ['Git', 'Jest', 'Enzyme'] },
-    { name: 'Methodologies', items: ['Agile / Scrum', 'ITIL v3', 'PMBoK / PMP', 'Lean / Six Sigma'] },
+    { name: 'Engineering & Architecture', items: ['Full Stack Development', 'Software Architecture', 'Large-Scale System Integration', 'API Integration', 'ERP Process Automation'], image: 'architecture' },
+    { name: 'Frontend', items: ['React', 'Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Bootstrap', 'Material UI'], image: 'frontend' },
+    { name: 'Backend', items: ['C#/.NET', 'ASP.NET', 'Java', 'Node.js', 'Python', 'PHP', 'Django', 'Ruby', 'Go'], image: 'backend' },
+    { name: 'Mobile', items: ['Ionic', 'Cordova', 'Capacitor', 'Flutter', 'React Native'], image: 'mobile' },
+    { name: 'ERP & Enterprise Platforms', items: ['Infor LN (LN Studio)', 'Baan', 'Infor CloudSuite', 'Salesforce (Admin, Apex, LWC)', 'ServiceNow'], image: 'erp' },
+    { name: 'AI & Automation', items: ['Claude Code', 'Cursor', 'OpenAI APIs', 'IBM Watson Assistant', 'NLP', 'Conversational AI', 'Prompt Engineering'], image: 'ai' },
+    { name: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'Terraform', 'Ansible', 'AWS', 'GCP', 'IBM Cloud', 'CI/CD'], image: 'devops' },
+    { name: 'Databases', items: ['Oracle', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQL Server', 'DB2', 'Cloudant'], image: 'databases' },
+    { name: 'Testing & Tools', items: ['Git', 'Jest', 'Enzyme'], image: 'testing' },
+    { name: 'Methodologies', items: ['Agile / Scrum', 'ITIL v3', 'PMBoK / PMP', 'Lean / Six Sigma'], image: 'methods' },
   ],
 
   languages: [

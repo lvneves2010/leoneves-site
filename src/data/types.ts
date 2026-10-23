@@ -11,9 +11,22 @@ export interface Experience {
   earlier?: boolean
 }
 
+export type SkillImage =
+  | 'architecture'
+  | 'frontend'
+  | 'backend'
+  | 'mobile'
+  | 'erp'
+  | 'ai'
+  | 'devops'
+  | 'databases'
+  | 'testing'
+  | 'methods'
+
 export interface SkillGroup {
   name: string
   items: string[]
+  image: SkillImage
 }
 
 export interface CertGroup {

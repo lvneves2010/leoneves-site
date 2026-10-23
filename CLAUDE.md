@@ -29,6 +29,7 @@ Antes de publicar: `npm run build` e `npx eslint .` sem erros.
 | `src/i18n/index.ts` | Textos da interface (menu, botões) nos dois idiomas; `langFromPath()` |
 | `src/App.tsx` | Todos os componentes da página |
 | `src/Flags.tsx` | Bandeiras em SVG inline (emojis de bandeira não aparecem no Windows) |
+| `src/Icons.tsx` | Ícones em SVG inline (e-mail, download, LinkedIn, GitHub) |
 | `src/entry-server.tsx` | `render(lang)` e `head(lang)`: metatags, hreflang e JSON-LD (`ProfilePage`/`Person`) |
 | `scripts/prerender.mjs` | Gera `dist/index.html` (PT) e `dist/en/index.html` (EN) |
 | `index.html` | Template: `<!--head-->` e `<!--app-->` são substituídos no pré-render; script inline aplica o tema antes do primeiro paint |
@@ -57,6 +58,9 @@ Antes de publicar: `npm run build` e `npx eslint .` sem erros.
 - Fotos em WebP em `public/img/`, com `width`/`height` explícitos no `<img>`.
 - `leonardo-neves.webp`: retrato com fundo transparente (o original do Weebly tinha fundo branco, removido para funcionar no tema escuro).
 - `og-image.jpg` (1200×630): prévia em LinkedIn/WhatsApp. Se mudar nome ou cargo, gere de novo.
+- Fotos de fundo dos cards: `public/img/stats/` (números do topo, 720×540) e `public/img/skills/` (stack tecnológico, 800×450). A chave de cada foto é `icon` em `stats` e `image` em `skills` (`profile.*.ts`); os caminhos ficam em `common.statImages` / `common.skillImages`. O estilo é `.photo-card` em `index.css`.
+- Essas fotos vêm do Wikimedia Commons e são **só CC0 ou domínio público** (sem exigência de crédito). Ao trocar uma, mantenha essa regra e atualize o `CREDITS.md` da pasta.
+- O fundo das seções (brilhos, pontos e sparkles) é só CSS/SVG: `.section::before/::after` e o componente `Sparkles` em `App.tsx`. A posição dos sparkles vem de um gerador fixo por seção (mesmo resultado no SSR e no cliente).
 - **Não use** os fundos de "fumaça azul" do tema Weebly (licenciados só para a Weebly) nem a imagem "DevOps Automation" (educba.com). O brilho azul do hero é CSS (`.hero-bg`).
 
 ## Decisões do dono do site

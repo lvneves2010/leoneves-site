@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { common } from './data/common'
 import type { Lang } from './data/types'
 import { FlagBR, FlagUK } from './Flags'
-import { IconDownload, IconGitHub, IconLinkedIn, IconMail, StatIconSvg } from './Icons'
+import { IconDownload, IconGitHub, IconLinkedIn, IconMail } from './Icons'
 import { LangContext, useI18n } from './i18n'
 
 type Theme = 'light' | 'dark'
@@ -160,10 +160,8 @@ function Hero() {
       </div>
       <div className="container stats">
         {p.stats.map(s => (
-          <div key={s.label} className="stat">
-            <span className="stat-icon">
-              <StatIconSvg name={s.icon} />
-            </span>
+          <div key={s.label} className="stat photo-card">
+            <img className="photo-card-img" src={common.statImages[s.icon]} alt="" width={720} height={540} decoding="async" />
             <strong>{s.value}</strong>
             <span>{s.label}</span>
           </div>
@@ -173,9 +171,54 @@ function Hero() {
   )
 }
 
+// Deterministic pseudo-random sequence (mulberry32), so server and client render the same sparkles.
+function seeded(seed: string) {
+  let a = [...seed].reduce((h, c) => Math.imul(h ^ c.charCodeAt(0), 2654435761), 1)
+  return () => {
+    a = (a + 0x6d2b79f5) | 0
+    let t = Math.imul(a ^ (a >>> 15), 1 | a)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+function Sparkles({ seed, count = 12 }: { seed: string; count?: number }) {
+  const rand = seeded(seed)
+  // Most sparkles go in the side margins, where cards don't cover them; a few near the heading.
+  const items = Array.from({ length: count }, (_, i) => ({
+    left: i % 4 === 3 ? 20 + rand() * 60 : i % 2 ? 1 + rand() * 7 : 92 + rand() * 7,
+    top: i % 4 === 3 ? 2 + rand() * 8 : 4 + rand() * 92,
+    size: 8 + rand() * 12,
+    delay: rand() * 6,
+    duration: 3 + rand() * 4,
+  }))
+  return (
+    <div className="sparkles" aria-hidden="true">
+      {items.map((s, i) => (
+        <svg
+          key={i}
+          className="sparkle"
+          viewBox="0 0 24 24"
+          style={{
+            left: `${s.left.toFixed(2)}%`,
+            top: `${s.top.toFixed(2)}%`,
+            width: `${s.size.toFixed(1)}px`,
+            height: `${s.size.toFixed(1)}px`,
+            animationDelay: `${s.delay.toFixed(2)}s`,
+            animationDuration: `${s.duration.toFixed(2)}s`,
+          }}
+        >
+          <path d="M12 0C12.9 7.6 16.4 11.1 24 12 16.4 12.9 12.9 16.4 12 24 11.1 16.4 7.6 12.9 0 12 7.6 11.1 11.1 7.6 12 0Z" />
+        </svg>
+      ))}
+    </div>
+  )
+}
+
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} className="section" aria-labelledby={`${id}-title`}>
+      <Sparkles seed={id} />
       <div className="container">
         <h2 id={`${id}-title`}>{title}</h2>
         {children}
@@ -281,7 +324,16 @@ function Skills() {
     <Section id="skills" title={t.skills}>
       <div className="skills-grid">
         {p.skills.map(g => (
-          <div key={g.name} className="card">
+          <div key={g.name} className="card photo-card skill-card">
+            <img
+              className="photo-card-img"
+              src={common.skillImages[g.image]}
+              alt=""
+              width={800}
+              height={450}
+              loading="lazy"
+              decoding="async"
+            />
             <h3>{g.name}</h3>
             <div className="chips">
               {g.items.map(i => (
