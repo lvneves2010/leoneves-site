@@ -300,6 +300,55 @@ h4 {
   color: var(--accent-text);
 }
 
+.icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Hero: contact links and CV downloads are separate groups */
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-actions .cta {
+  margin-top: 0;
+}
+
+.cv-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 12px 14px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+}
+
+.cv-box-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cv-box-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cv-box .btn {
+  padding: 8px 14px;
+  font-size: 0.92rem;
+}
+
 .btn-small {
   padding: 6px 14px;
   font-size: 0.85rem;
@@ -321,6 +370,22 @@ h4 {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+}
+
+.stat .stat-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.stat-icon-svg {
+  width: 24px;
+  height: 24px;
 }
 
 .stat strong {
