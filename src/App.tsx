@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { common } from './data/common'
 import type { Lang } from './data/types'
 import { FlagBR, FlagUK } from './Flags'
+import { IconDownload, IconGitHub, IconLinkedIn, IconMail, StatIconSvg } from './Icons'
 import { LangContext, useI18n } from './i18n'
 
 type Theme = 'light' | 'dark'
@@ -105,7 +106,7 @@ function CvButtons() {
     <>
       {items.map(i => (
         <a key={i.l} className="btn" href={i.href} download hrefLang={i.l} type="application/pdf">
-          ⬇ {i.label}
+          <IconDownload /> {i.label}
         </a>
       ))}
     </>
@@ -133,17 +134,24 @@ function Hero() {
           <p className="hero-meta">
             📍 {p.location}
           </p>
-          <div className="cta">
-            <a className="btn btn-primary" href={`mailto:${common.email}`}>
-              {t.getInTouch}
-            </a>
-            <a className="btn" href={common.linkedin} target="_blank" rel="noopener me">
-              LinkedIn
-            </a>
-            <a className="btn" href={common.github} target="_blank" rel="noopener me">
-              GitHub
-            </a>
-            <CvButtons />
+          <div className="hero-actions">
+            <div className="cta">
+              <a className="btn btn-primary" href={`mailto:${common.email}`}>
+                <IconMail /> {t.getInTouch}
+              </a>
+              <a className="btn" href={common.linkedin} target="_blank" rel="noopener me">
+                <IconLinkedIn /> {t.myLinkedIn}
+              </a>
+              <a className="btn" href={common.github} target="_blank" rel="noopener me">
+                <IconGitHub /> {t.myGitHub}
+              </a>
+            </div>
+            <div className="cv-box">
+              <span className="cv-box-label">{t.downloadCv}</span>
+              <div className="cv-box-buttons">
+                <CvButtons />
+              </div>
+            </div>
           </div>
         </div>
         <div className="hero-photo">
@@ -153,6 +161,9 @@ function Hero() {
       <div className="container stats">
         {p.stats.map(s => (
           <div key={s.label} className="stat">
+            <span className="stat-icon">
+              <StatIconSvg name={s.icon} />
+            </span>
             <strong>{s.value}</strong>
             <span>{s.label}</span>
           </div>
@@ -355,13 +366,13 @@ function Contact() {
         </p>
         <div className="cta">
           <a className="btn btn-primary" href={`mailto:${common.email}`}>
-            ✉ {common.email}
+            <IconMail /> {common.email}
           </a>
           <a className="btn" href={common.linkedin} target="_blank" rel="noopener me">
-            {common.linkedinLabel}
+            <IconLinkedIn /> {common.linkedinLabel}
           </a>
           <a className="btn" href={common.github} target="_blank" rel="noopener me">
-            {common.githubLabel}
+            <IconGitHub /> {common.githubLabel}
           </a>
           <CvButtons />
         </div>

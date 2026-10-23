@@ -26,10 +26,10 @@ export const profileEn: ProfileContent = {
   ],
 
   stats: [
-    { value: '20+', label: 'years in technology' },
-    { value: '20+', label: 'countries served' },
-    { value: '3', label: 'continents' },
-    { value: '2M+', label: 'assets covered by IBM vulnerability app' },
+    { value: '20+', label: 'years in technology', icon: 'years' },
+    { value: '20+', label: 'countries served', icon: 'countries' },
+    { value: '3', label: 'continents', icon: 'continents' },
+    { value: '2M+', label: 'assets covered by IBM vulnerability app', icon: 'assets' },
   ],
 
   highlights: [

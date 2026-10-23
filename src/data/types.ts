@@ -22,13 +22,15 @@ export interface CertGroup {
 }
 
 /** Content that changes with the selected language. */
+export type StatIcon = 'years' | 'countries' | 'continents' | 'assets'
+
 export interface ProfileContent {
   seo: { title: string; description: string; keywords: string }
   headline: string
   tagline: string[]
   location: string
   summary: string[]
-  stats: { value: string; label: string }[]
+  stats: { value: string; label: string; icon: StatIcon }[]
   highlights: string[]
   experience: Experience[]
   skills: SkillGroup[]
@@ -48,6 +50,8 @@ export interface UiStrings {
   earlierCareer: string
   langNames: Record<Lang, string>
   getInTouch: string
+  myLinkedIn: string
+  myGitHub: string
   downloadCv: string
   cvEn: string
   cvPt: string
